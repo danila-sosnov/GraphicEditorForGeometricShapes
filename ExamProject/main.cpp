@@ -1,12 +1,26 @@
-#include "point.h"
-#include "line.h"
+#include "Line.h"
 
 int main()
 {
-	Point point1(3, 2), point2(4, 3);
+    Shape* point = new Point(2, 3);
+   
+    cout << "Point: " << point->toString() << endl;
+    cout << "Distance from origin: " << point->getDistance() << endl;
+    cout << "Perimeter: " << point->getPerimeter() << endl;
+    cout << "Square: " << point->getSquare() << endl << "\n";
+   
+    delete point;
 
-	cout << "Point x and y: " << point1.toString() << endl;
-	cout << "Length = " << point1.getLength() << endl;
+    Point p1(2, 6), p2(3, 4);
 
-	return 0;
+    Shape* line = new Line(p1, p2);
+
+    cout << line->toString() << endl;
+    cout << "Distance from origin: " << line->getDistance() << endl;
+    cout << "Perimeter: " << line->getPerimeter() << endl;
+    cout << "Square: " << line->getSquare() << endl;
+
+    delete line;
+
+    return 0;
 }

@@ -1,22 +1,25 @@
-#pragma once
 #include "Point.h"
 
-
-class Line
+class Line : public Shape
 {
 private:
 
-	Point p1;
-	Point p2;
+    Point p1;
+    Point p2;
 
 public:
 
-	Line(Point& p1, Point& p2);
+    Line();
+    Line(Point p1, Point p2);
+    ~Line();
 
-	
-	double getLength();
-	int getPerimeter();
+    Point getP1();
+    void setP1(Point p1);
+    Point getP2();
+    void setP2(Point p2);
 
-	string toString();
+    double getDistance() override;
+    double getPerimeter() override;
+    int getSquare() override;
+    string toString() override;
 };
-

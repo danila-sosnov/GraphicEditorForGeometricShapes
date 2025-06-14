@@ -1,47 +1,48 @@
 #include "Point.h"
 
+Point::Point() : x(0), y(0) {}
 
-string Point::toString()
+Point::Point(int x, int y) : x(x), y(y) {}
+
+Point::~Point() {}
+
+int Point::getX() 
 {
-	string s = "";
-
-	s += "x = " + to_string(x)
-		+ ", y = " + to_string(y);
-
-	return s;
+    return x;
 }
 
-Point::Point()
+void Point::setX(int x)
 {
-	x = 0;
-	y = 0;
+    this->x = x;
 }
 
-Point::Point(int x, int y)
+int Point::getY() 
 {
-	this->x = x;
-	this->y = y;
+    return y;
 }
 
-int Point::getX()
+void Point::setY(int y)
 {
-	return x;
-}
-void Point::setX()
-{
-	this->x = x;
-}
-int Point::getY()
-{
-	return y;
-}
-void Point::setY()
-{
-	this->y = y;
+    this->y = y;
 }
 
-double Point::getLength()
+double Point::getPerimeter() 
 {
-	return sqrt(pow(x - 0, 2) + pow(y - 0, 2));
+    return 0.0;
 }
 
+int Point::getSquare() 
+{
+    return 0;
+}
+
+double Point::getDistance() 
+{
+    return sqrt(x * x + y * y);
+}
+
+string Point::toString() 
+{
+    return "x = " + to_string(x)
+        +  ", y = " + to_string(y);
+}

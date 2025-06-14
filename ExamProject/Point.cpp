@@ -31,7 +31,7 @@ double Point::getPerimeter()
     return 0.0;
 }
 
-int Point::getSquare() 
+double Point::getSquare() 
 {
     return 0;
 }

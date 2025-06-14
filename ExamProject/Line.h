@@ -1,3 +1,4 @@
+#pragma once
 #include "Point.h"
 
 class Line : public Shape
@@ -20,6 +21,6 @@ public:
 
     double getDistance() override;
     double getPerimeter() override;
-    int getSquare() override;
+    double getSquare() override;
     string toString() override;
 };

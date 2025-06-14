@@ -1,3 +1,4 @@
+#pragma once
 #include "Shape.h"
 
 class Point : public Shape
@@ -19,7 +20,7 @@ public:
     void setY(int y);
 
     double getPerimeter() override;
-    int getSquare() override;
+    double getSquare() override;
     double getDistance() override;
     string toString() override;
 };

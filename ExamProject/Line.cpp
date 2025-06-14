@@ -38,7 +38,7 @@ double Line::getPerimeter()
         + pow(p2.getY() - p1.getY(), 2));
 }
 
-int Line::getSquare()
+double Line::getSquare()
 {
     return 0;
 }

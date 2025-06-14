@@ -1,4 +1,5 @@
 #include "Line.h"
+#include "Circle.h"
 
 int main()
 {
@@ -18,9 +19,18 @@ int main()
     cout << line->toString() << endl;
     cout << "Distance from origin: " << line->getDistance() << endl;
     cout << "Perimeter: " << line->getPerimeter() << endl;
-    cout << "Square: " << line->getSquare() << endl;
+    cout << "Square: " << line->getSquare() << endl << "\n";
 
     delete line;
+
+    Shape* circle = new Circle(4, 2, 3);
+
+    cout << circle->toString() << endl;
+    cout << "Distance from origin: " << circle->getDistance() << endl;
+    cout << "Perimeter: " << circle->getPerimeter() << endl;
+    cout << "Square: " << circle->getSquare() << endl;
+
+    delete circle;
 
     return 0;
 }

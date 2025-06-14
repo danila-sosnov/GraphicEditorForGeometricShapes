@@ -1,6 +1,7 @@
 #include "Line.h"
 #include "Circle.h"
 #include "Triangle.h"
+#include "Rectangle.h"
 
 int main()
 {
@@ -13,7 +14,7 @@ int main()
    
     delete point;
 
-    Point p1(1, 2), p2(4, 6), p3(7, 3), p4(4, 6);
+    Point p1(1, 2), p2(4, 6), p3(7, 3);
 
     Shape* line = new Line(p1, p2);
 
@@ -41,6 +42,15 @@ int main()
     cout << "Square: " << triangle->getSquare() << endl << "\n";
 
     delete triangle;
+
+    Shape* rectangle = new Rectangle(3, 4, 2, 6);
+
+    cout << rectangle->toString() << endl;
+    cout << "Distance from origin: " << rectangle->getDistance() << endl;
+    cout << "Perimeter: " << rectangle->getPerimeter() << endl;
+    cout << "Square: " << rectangle->getSquare() << endl << "\n";
+
+    delete rectangle;
 
     return 0;
 }
